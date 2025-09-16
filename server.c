@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 12:41:52 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/16 16:25:06 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,32 @@
 
 void	ft_receptionBit(int sigusr)
 {
+	static	int	tabBit[8];
+	static	int	i;
+
 	if (sigusr == SIGUSR1)
 	{
-		ft_printf("\nbradley\n");
+		tabBit[i] = 1;
 	}
 	else if (sigusr == SIGUSR2)
 	{
-		ft_printf("\nouss\n");
+		tabBit[i] = 0;
+	}
+	i++;
+	if (i == 8)
+	{
+		int	j;
+		char	c;
+		
+		c = 0;
+		j = 0;
+		while (j < 8)
+		{
+			c = c * 2 + tabBit[j];
+			j++;
+		}
+		ft_printf("%c", c);
+		i = 0;
 	}
 }
 

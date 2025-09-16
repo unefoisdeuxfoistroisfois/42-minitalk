@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 15:10:45 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/16 16:22:58 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_conversionEnBit(pid_t argsPid, char c)
 	int	newBit[8];
 
 	i = 0;
-	while (i != 7)
+	while (i < 8)
 	{
 		newBit[i] = c % 2;
 		c = c / 2;
@@ -33,8 +33,9 @@ void	ft_conversionEnBit(pid_t argsPid, char c)
 		}
 		else if (newBit[i] == 0)
 		{
-			kill(argsPid, SIGUSR1);
+			kill(argsPid, SIGUSR2);
 		}
+		usleep(100);
 		i--;
 	}
 }
@@ -45,10 +46,10 @@ int	main(int argc, char **argv)
 	char	*message;
 	int	i;
 
-	if (argc == 3)
-	{
-		ft_printf("communique : ");
-	}
+//	if (argc == 3)
+//	{
+//		ft_printf("communique : ");
+//	}
 	/* repeter la commande kill(shell) fais un ligne de commande 
 	 * kill -USR1 numeropid
 	 * kill -USR2 3328
