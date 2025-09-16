@@ -6,13 +6,13 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 14:43:12 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:10:45 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	ft_conversionEnBit(char c)
+void	ft_conversionEnBit(pid_t argsPid, char c)
 {
 	int	i;
 	int	newBit[8];
@@ -27,7 +27,14 @@ void	ft_conversionEnBit(char c)
 	i = 7;
 	while (i >= 0)
 	{
-		ft_printf("%d", newBit[i]);
+		if (newBit[i] == 1)
+		{
+			kill(argsPid, SIGUSR1);
+		}
+		else if (newBit[i] == 0)
+		{
+			kill(argsPid, SIGUSR1);
+		}
 		i--;
 	}
 }
@@ -56,7 +63,7 @@ int	main(int argc, char **argv)
 	i = 0;
 	while (message[i] != '\0')
 	{
-		ft_conversionEnBit(message[i]);
+		ft_conversionEnBit(nPid, message[i]);
 		i++;
 	}
 	return (0);
