@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/15 17:02:00 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/16 12:41:52 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_receptionBit(int sigusr)
 {
 	if (sigusr == SIGUSR1)
 	{
-		ft_printf("bradley");
+		ft_printf("\nbradley\n");
 	}
 	else if (sigusr == SIGUSR2)
 	{
-		ft_printf("ouss");
+		ft_printf("\nouss\n");
 	}
 }
 
