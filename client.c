@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 16:22:58 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/17 00:42:44 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,11 @@ int	main(int argc, char **argv)
 	char	*message;
 	int	i;
 
-//	if (argc == 3)
-//	{
-//		ft_printf("communique : ");
-//	}
+	if (argc != 3)
+	{
+		ft_printf("ciao : ");
+		return (-1);
+	}
 	/* repeter la commande kill(shell) fais un ligne de commande 
 	 * kill -USR1 numeropid
 	 * kill -USR2 3328
