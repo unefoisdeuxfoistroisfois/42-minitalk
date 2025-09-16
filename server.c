@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 16:25:06 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/16 16:58:48 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	main()
 	int	varpid; //La fonction pid renvoie un entier
 
 	varpid = getpid(); 
-	ft_printf("PID : %d", varpid);
+	ft_printf("PID : (%d)", varpid);
 
 	ft_discussion();
 	return(0);
