@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/16 16:58:48 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/18 12:26:07 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	ft_discussion(void)
 
 	nombreInfini = 1;
 	signal(SIGUSR1, ft_receptionBit);
+	write(1, "\n", 1);
 	signal(SIGUSR2, ft_receptionBit);
 
 	while(nombreInfini)
