@@ -6,7 +6,7 @@
 #    By: britela- <britela-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/18 12:33:07 by britela-          #+#    #+#              #
-#    Updated: 2025/09/16 19:09:26 by britela-         ###   ########.fr        #
+#    Updated: 2025/09/20 15:36:51 by britela-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC_SERVER = server.c
 SRC_CLIENT = client.c
 
 # Libs
-LIBFT_DIR   = libft
+LIBFT_DIR   = Libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
 PRINTF_DIR  = ft_printf
