@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/17 00:42:44 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/22 16:44:41 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ int	main(int argc, char **argv)
 		ft_conversionEnBit(nPid, message[i]);
 		i++;
 	}
+	ft_conversionEnBit(nPid, '\n');   // insère un saut de ligne immédiat
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/18 12:26:07 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/22 16:46:11 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_receptionBit(int sigusr)
 			c = c * 2 + tabBit[j];
 			j++;
 		}
-		ft_printf("%c", c);
+            	write(1, &c, 1);
 		i = 0;
 	}
 }
