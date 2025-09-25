@@ -6,13 +6,13 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/25 14:14:24 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/25 15:24:18 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static int  get_ack = 0;
+static volatile sig_atomic_t get_ack = 0; // au lieu de int
 
 void	reception_ack(int sig)
 {

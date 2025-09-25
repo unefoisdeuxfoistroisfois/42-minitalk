@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/25 14:58:43 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/25 15:28:37 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_receptionBit(int sigusr, siginfo_t *info, void *content)
 	static	int	tabBit[8];
 	static	int	i;
 
-	i = 0;
 	if (sigusr == SIGUSR1)
 		tabBit[i] = 1;
 	else if (sigusr == SIGUSR2)
@@ -39,10 +38,11 @@ void	ft_receptionBit(int sigusr, siginfo_t *info, void *content)
 		if (c == '\0')
 			write(1, "\n", 1);
 		else
-			write(1, "\n", 1);
+			write(1, &c, 1);
 		i = 0;
 	}
-	kill(info->si_pid, SIGUSR1);
+	if (info && info->si_pid)
+		kill(info->si_pid, SIGUSR1); // ACK
 }
 
 void	ft_discussion(void)

@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 23:52:46 by britela-          #+#    #+#             */
-/*   Updated: 2025/05/06 01:54:26 by britela-         ###   ########.fr       */
+/*   Updated: 2025/07/08 13:14:16 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,6 @@ char	**ft_split(char	const *s, char c)
 		return (NULL);
 	return (newword);
 }
-/*
 int	main()
 {
 	char	*mot;
@@ -126,4 +125,4 @@ int	main()
 
 	free_tab(res, i);
 	return (0);
-}*/
+}
