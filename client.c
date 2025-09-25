@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/25 16:29:17 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/25 23:05:40 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ft_convertinbit(pid_t argsPid, char c)
 			kill(argsPid, SIGUSR1);
 		else if (newbit[i] == 0)
 			kill(argsPid, SIGUSR2);
-		while (get_ack != 1)
+		while (g_ack != 1)
 		{
 			pause();
 		}
