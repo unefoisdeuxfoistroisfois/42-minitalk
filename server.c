@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 19:09:08 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/24 23:19:53 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/25 13:13:42 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_receptionBit(int sigusr, siginfo_t *info, void *content)
 {
-	void(context);
+	(void)content;
 	static	int	tabBit[8];
 	static	int	i;
 
@@ -23,6 +23,7 @@ void	ft_receptionBit(int sigusr, siginfo_t *info, void *content)
 	else if (sigusr == SIGUSR2)
 		tabBit[i] = 0;
 	i++;
+	kill(info->si_pid, SIGUSR1);
 	if (i == 8)
 	{
 		int	j;
@@ -37,9 +38,6 @@ void	ft_receptionBit(int sigusr, siginfo_t *info, void *content)
 		}
             	write(1, &c, 1);
 		i = 0;
-	kill(info->si_pid, SIG
-	printf("Signal reçu : %d\n", sig);
-    	printf("Envoyé par le PID : %d\n", info->si_pid);USR1);
 	}
 }
 
@@ -47,11 +45,12 @@ void	ft_discussion(void)
 {
 	struct	sigaction action;
 	int	nombreInfini;
-	siginfo_t	info= ft_receptionBit();
 
 	nombreInfini = 1;
+    sigemptyset(&action.sa_mask);
 	action.sa_sigaction = ft_receptionBit;
 	action.sa_flags = SA_SIGINFO;
+
 	sigaction(SIGUSR1, &action, NULL);
 	sigaction(SIGUSR2, &action, NULL);
 	write(1, "\n", 1);
