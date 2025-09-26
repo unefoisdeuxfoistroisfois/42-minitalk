@@ -6,7 +6,7 @@
 /*   By: britela- <britela-@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/14 22:33:26 by britela-          #+#    #+#             */
-/*   Updated: 2025/09/25 23:05:40 by britela-         ###   ########.fr       */
+/*   Updated: 2025/09/26 14:52:25 by britela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		ft_printf("ciao : ");
+		ft_printf ("Format correct : %s (PID) (message)\n", argv[0]);
 		return (-1);
 	}
 	npid = ft_atoi(argv[1]);

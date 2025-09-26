@@ -6,7 +6,7 @@
 #    By: britela- <britela-@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/18 12:33:07 by britela-          #+#    #+#              #
-#    Updated: 2025/09/20 15:36:51 by britela-         ###   ########.fr        #
+#    Updated: 2025/09/26 14:59:55 by britela-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC      = cc
 CFLAGS  = -Wall -Wextra -Werror
 RM      = rm -rf
 
-# Program names
+# Nom des programmes
 SERVER = server
 CLIENT = client
 
@@ -22,14 +22,12 @@ CLIENT = client
 SRC_SERVER = server.c
 SRC_CLIENT = client.c
 
-# Libs
 LIBFT_DIR   = Libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
 PRINTF_DIR  = ft_printf
 PRINTF      = $(PRINTF_DIR)/libftprintf.a
 
-# Build rules
 all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SRC_SERVER) $(LIBFT) $(PRINTF)
